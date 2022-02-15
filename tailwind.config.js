@@ -3,9 +3,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        desktop:
+        "order-summary-bg-desktop":
           'url("/src/assets/order-summary-component/images/pattern-background-desktop.svg")',
-        mobile:
+        "order-summary-bg-mobile":
           'url("/src/assets/order-summary-component/images/pattern-background-mobile.svg")',
       },
       colors: {

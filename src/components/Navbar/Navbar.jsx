@@ -7,7 +7,9 @@ export default function Navbar() {
 
   return (
     <div
-      className={`flex bg-transparent absolute ${show && "shadow-lg w-full"}`}
+      className={`flex bg-transparent absolute p-4  ${
+        show && "shadow-lg w-full"
+      }`}
     >
       <button onClick={() => setShow(!show)}>
         <BsFillCaretRightFill
@@ -19,11 +21,16 @@ export default function Navbar() {
           !show && "-translate-x-96 invisible"
         } duration-200`}
       >
-        <li>
+        <li className="font-light text-sm text-center self-center">
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/order-summary-component">Order Summary Component</Link>
+          <Link
+            to="/order-summary-component"
+            className="font-light text-sm self-center"
+          >
+            Order Summary Comp
+          </Link>
         </li>
       </ul>
     </div>

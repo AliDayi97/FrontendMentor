@@ -21,16 +21,21 @@ export default function OrderSummaryCard() {
             <h1 className="font-bold">Annual Plan</h1>
             <p className="opacity-50">$59.99/year</p>
           </div>
-          <a href="#" className="underline self-center">
+          <a
+            href="#"
+            className="underline self-center text-primary-bright-blue hover:opacity-50 duration-200"
+          >
             Change
           </a>
         </div>
 
         <div className="flex flex-col">
-          <button className="bg-primary-bright-blue text-white py-2 px-4 rounded-xl mb-4">
+          <button className="bg-primary-bright-blue text-white py-2 px-4 rounded-xl mb-4 hover:opacity-70 duration-200">
             Proceed to Payment
           </button>
-          <button className="mb-10">Cancel Order</button>
+          <button className="mb-10 opacity-50 hover:opacity-100 duration-200">
+            Cancel Order
+          </button>
         </div>
       </div>
     </div>
