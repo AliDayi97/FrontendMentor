@@ -34,7 +34,7 @@ export default function OrderSummaryCard() {
           <button className="bg-primary-bright-blue text-white py-2 px-4 rounded-xl mb-4 hover:opacity-70 duration-200">
             Proceed to Payment
           </button>
-          <button className="mb-10 opacity-50 hover:opacity-100 duration-200">
+          <button className="mb-10 opacity-70 hover:opacity-100 duration-200">
             Cancel Order
           </button>
         </div>
