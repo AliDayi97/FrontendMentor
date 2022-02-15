@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/FrontendMentor/static/css/main.ccd6fcdf.css",
-    "main.js": "/FrontendMentor/static/js/main.0f62c97d.js",
+    "main.css": "/FrontendMentor/static/css/main.dbfad228.css",
+    "main.js": "/FrontendMentor/static/js/main.08e6c0ca.js",
     "static/media/illustration-hero.svg": "/FrontendMentor/static/media/illustration-hero.7303258392501e7adc159201ab028e44.svg",
     "index.html": "/FrontendMentor/index.html",
     "static/media/icon-music.svg": "/FrontendMentor/static/media/icon-music.f20c7787426b3847880ef13817068c16.svg",
     "static/media/pattern-background-mobile.svg": "/FrontendMentor/static/media/pattern-background-mobile.c8d50fcb68aa27a01e4d.svg",
     "static/media/pattern-background-desktop.svg": "/FrontendMentor/static/media/pattern-background-desktop.5a0ab6898fc956557d00.svg",
-    "main.ccd6fcdf.css.map": "/FrontendMentor/static/css/main.ccd6fcdf.css.map",
-    "main.0f62c97d.js.map": "/FrontendMentor/static/js/main.0f62c97d.js.map"
+    "main.dbfad228.css.map": "/FrontendMentor/static/css/main.dbfad228.css.map",
+    "main.08e6c0ca.js.map": "/FrontendMentor/static/js/main.08e6c0ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.ccd6fcdf.css",
-    "static/js/main.0f62c97d.js"
+    "static/css/main.dbfad228.css",
+    "static/js/main.08e6c0ca.js"
   ]
 }
