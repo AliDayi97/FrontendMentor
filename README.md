@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with Projects
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Move in to the directory of the challenge and run relevant command.
 
 ## Available Scripts
 
