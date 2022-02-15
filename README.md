@@ -1,7 +1,3 @@
-# Getting Started with Projects
-
-Move in to the directory of the challenge and run relevant command.
-
 ## Available Scripts
 
 In the project directory, you can run:
