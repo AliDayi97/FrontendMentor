@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { Home, OrderSummaryComponent } from "./pages";
 import { Navbar } from "./components";
 
@@ -8,11 +8,12 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/FrontendMentor" element={<Home />} />
         <Route
-          path="order-summary-component"
+          path="/FrontendMentor/order-summary-component"
           element={<OrderSummaryComponent />}
         />
+        <Route path="*" element={<Navigate to="/FrontendMentor" />} />
       </Routes>
     </>
   );
