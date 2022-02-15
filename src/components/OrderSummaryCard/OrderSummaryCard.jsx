@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import musicIcon from "./../../assets/order-summary-component/images/icon-music.svg";
 import hero from "./../../assets/order-summary-component/images/illustration-hero.svg";
