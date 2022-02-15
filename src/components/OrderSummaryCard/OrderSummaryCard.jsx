@@ -1,6 +1,6 @@
 import React from "react";
-import musicIcon from "./../../assets/images/icon-music.svg";
-import hero from "./../../assets/images/illustration-hero.svg";
+import musicIcon from "./../../assets/order-summary-component/images/icon-music.svg";
+import hero from "./../../assets/order-summary-component/images/illustration-hero.svg";
 
 export default function OrderSummaryCard() {
   return (

@@ -3,8 +3,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        desktop: 'url("/resources/images/pattern-background-desktop.svg")',
-        mobile: 'url("/resources/images/pattern-background-mobile.svg")',
+        desktop:
+          'url("/src/assets/order-summary-component/images/pattern-background-desktop.svg")',
+        mobile:
+          'url("/src/assets/order-summary-component/images/pattern-background-mobile.svg")',
       },
       colors: {
         primary: {
