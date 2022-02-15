@@ -8,12 +8,12 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/FrontendMentor" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route
-          path="/FrontendMentor/order-summary-component"
+          path="/order-summary-component"
           element={<OrderSummaryComponent />}
         />
-        <Route path="*" element={<Navigate to="/FrontendMentor" />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>
   );

@@ -26,7 +26,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link
-            to="/FrontendMentor/order-summary-component"
+            to="/order-summary-component"
             className="font-light text-sm self-center"
           >
             Order Summary Comp
