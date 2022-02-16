@@ -1,12 +1,20 @@
 import React from "react";
 import { CommentCard } from "..";
 
-export default function CommentReplyCard({ reply, currentUser }) {
+export default function CommentReplyCard({
+  reply,
+  currentUser,
+  updateComment,
+}) {
+  const handleCommentUpdate = (replyId, data) => {
+    updateComment(replyId, { isReply: true, ...data });
+  };
+
   return (
     <CommentCard
-      className="w-[90%]"
       comment={reply}
       currentUser={currentUser}
+      updateComment={handleCommentUpdate}
     />
   );
 }
