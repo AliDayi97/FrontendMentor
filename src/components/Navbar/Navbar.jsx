@@ -32,6 +32,14 @@ export default function Navbar() {
             Order Summary Comp
           </Link>
         </li>
+        <li>
+          <Link
+            to="/interactive-comments-section"
+            className="font-light text-sm self-center"
+          >
+            Interactive Comments Section
+          </Link>
+        </li>
       </ul>
     </div>
   );
