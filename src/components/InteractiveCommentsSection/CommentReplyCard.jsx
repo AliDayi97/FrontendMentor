@@ -5,16 +5,25 @@ export default function CommentReplyCard({
   reply,
   currentUser,
   updateComment,
+  deleteComment,
 }) {
-  const handleCommentUpdate = (replyId, data) => {
-    updateComment(replyId, { isReply: true, ...data });
+  const handleReplyUpdate = (replyId, data) => {
+    updateComment(replyId, {
+      updateReply: data.addReply ? false : true,
+      ...data,
+    });
+  };
+
+  const handleReplyDelete = (replyId, parentId) => {
+    deleteComment(replyId, parentId);
   };
 
   return (
     <CommentCard
       comment={reply}
       currentUser={currentUser}
-      updateComment={handleCommentUpdate}
+      updateComment={handleReplyUpdate}
+      deleteComment={handleReplyDelete}
     />
   );
 }
