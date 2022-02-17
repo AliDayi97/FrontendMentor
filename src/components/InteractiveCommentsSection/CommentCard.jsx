@@ -1,3 +1,4 @@
+import moment from "moment";
 import React, { useState } from "react";
 import { DeleteCommentModal } from "../index";
 import { ReactComponent as DeleteIcon } from "./../../assets/interactive-comments-section/images/icons/icon-delete.svg";
@@ -28,6 +29,11 @@ export default function CommentCard({
       addReply: true,
       replyingTo: { username: comment.user.username, id: comment.parentId },
     });
+  };
+
+  const formatDate = (timestamp) => {
+    const fromNow = moment.unix(timestamp).fromNow();
+    return fromNow;
   };
 
   const CommentActions = () => {
@@ -105,7 +111,7 @@ export default function CommentCard({
             </div>
           )}
           <div className="h-fit min-h-fit opacity-60 flex-1">
-            {comment.createdAt}
+            {formatDate(comment.createdAt)}
           </div>
           <div className="sm:flex hidden">
             <CommentActions />
@@ -116,6 +122,7 @@ export default function CommentCard({
           {editing ? (
             <div className="flex flex-col">
               <textarea
+                autoFocus
                 key="edit"
                 rows={4}
                 className="opacity-70 resize-none w-100 border-2 border-primary-moderate-blue rounded-md mb-2"
@@ -128,6 +135,11 @@ export default function CommentCard({
                       ? e.target.value.substring(comment.replyingTo.length + 2)
                       : e.target.value
                   );
+                }}
+                onFocus={function (e) {
+                  var val = e.target.value;
+                  e.target.value = "";
+                  e.target.value = val;
                 }}
               />
               <button
@@ -162,6 +174,11 @@ export default function CommentCard({
                   setText(
                     e.target.value.substring(comment.replyingTo.length + 2)
                   );
+                }}
+                onFocus={function (e) {
+                  var val = e.target.value;
+                  e.target.value = "";
+                  e.target.value = val;
                 }}
               />
               <button

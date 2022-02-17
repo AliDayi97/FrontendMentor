@@ -21,6 +21,11 @@ export default function NewCommentCard({ currentUser, onAdd }) {
             className="border-[1px] h-24 rounded-md resize-none w-full px-4 py-2 mr-4"
             placeholder="Add a comment..."
             onChange={(e) => setText(e.target.value)}
+            onFocus={function (e) {
+              var val = e.target.value;
+              e.target.value = "";
+              e.target.value = val;
+            }}
           />
           <button
             className="bg-primary-moderate-blue text-white w-36 h-12 rounded-lg hover:opacity-50"
@@ -42,6 +47,11 @@ export default function NewCommentCard({ currentUser, onAdd }) {
             className="border-[1px] h-24 rounded-md resize-none w-full px-4 py-2 mb-4"
             placeholder="Add a comment..."
             onChange={(e) => setText(e.target.value)}
+            onFocus={function (e) {
+              var val = e.target.value;
+              e.target.value = "";
+              e.target.value = val;
+            }}
           />
           <div className="flex justify-between">
             <img

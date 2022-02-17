@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  CommentCard,
-  CommentReplyCard,
-  NewCommentCard,
-} from "../../components";
+import { CommentCard, NewCommentCard } from "../../components";
 import commentsData from "./../../assets/interactive-comments-section/data.json";
 import "./index.css";
 
@@ -23,11 +19,10 @@ export default function InteractiveCommentsSection() {
 
   const addComment = (content) => {
     const newId = getNewId();
-
     const commentData = {
       id: newId,
       content,
-      createdAt: Date.now(),
+      createdAt: +new Date() / 1000,
       replies: [],
       score: 0,
       user: currentUser,
@@ -66,7 +61,7 @@ export default function InteractiveCommentsSection() {
         parentId: replyingTo.id,
         id: newId,
         content: content || "",
-        createdAt: Date.now(),
+        createdAt: +new Date() / 1000,
         replyingTo: replyingTo.username,
         score: 0,
         user: currentUser,
@@ -80,6 +75,7 @@ export default function InteractiveCommentsSection() {
       setComments(updatedComments);
     } else {
       const index = comments.findIndex((comment) => comment.id === commentId);
+
       if (content) {
         updatedComments[index].content = content;
       }
@@ -93,7 +89,6 @@ export default function InteractiveCommentsSection() {
   };
 
   const deleteComment = (commentId, parentId) => {
-    console.log("COMMENT ID", commentId, parentId);
     let updatedComments = [...comments];
 
     if (parentId) {
@@ -106,8 +101,6 @@ export default function InteractiveCommentsSection() {
       );
 
       updatedComments[commentIndex].replies = filteredReplies;
-
-      console.log("UPpdated Comment", updatedComments);
     } else {
       const filtered = updatedComments.filter(
         (comment) => comment.id !== commentId
@@ -133,11 +126,16 @@ export default function InteractiveCommentsSection() {
             {comment.replies && comment.replies.length > 0 && (
               <div className="border-l-2 sm:pl-10 sm:ml-10 ml-0 mb-4 pl-5">
                 {comment.replies.map((reply) => (
-                  <CommentReplyCard
+                  <CommentCard
                     key={`${reply.id} ${reply.user.username}`}
-                    reply={reply}
+                    comment={reply}
                     currentUser={currentUser}
-                    updateComment={updateComment}
+                    updateComment={(replyId, data) => {
+                      updateComment(replyId, {
+                        updateReply: !data.addReply,
+                        ...data,
+                      });
+                    }}
                     deleteComment={deleteComment}
                   />
                 ))}
